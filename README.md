@@ -15,6 +15,21 @@ cmake ..
 cmake --build .
 ```
 
+## Building on MS Windows
+
+Windows 11 / VS2022 Community. Building release static build.
+
+Open "Developer Command Prompt":
+```
+cd c:\workdir
+git clone ...
+mkdir clpeak\build
+cd clpeak\build
+git submodule update --init --recursive --remote
+cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded ..
+cmake --build .
+```
+
 ## Sample
 
 ```text
